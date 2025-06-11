@@ -80,4 +80,3 @@ country_recommender/
 - Endpoint: `https://restcountries.com/v3.1/all`
 - Campos utilizados: name, flags, capital, population, languages, region, subregion
 - Documentação: https://restcountries.com/
-
