@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Países Personalizado</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🌍 Encontre seu Destino Ideal</h1>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-btn">
+                    <span id="theme-icon">🌙</span>
+                    <span id="theme-text">Modo Dark</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="quiz-section">
+            <h2>Conte-nos sobre suas preferências de viagem:</h2>
+            <form id="travel-quiz">
+                <div class="question-group">
+                    <label for="climate">🌡️ Você gosta de frio ou calor?</label>
+                    <select id="climate" name="climate" required>
+                        <option value="">Selecione...</option>
+                        <option value="cold">❄️ Frio</option>
+                        <option value="hot">☀️ Calor</option>
+                        <option value="mild">🌤️ Ambos</option>
+                    </select>
+                </div>
+
+                <div class="question-group">
+                    <label for="environment">🏞️ Prefere natureza ou cidade grande?</label>
+                    <select id="environment" name="environment" required>
+                        <option value="">Selecione...</option>
+                        <option value="nature">🌲 Natureza</option>
+                        <option value="city">🏙️ Cidade Grande</option>
+                        <option value="both">🌆 Ambos</option>
+                    </select>
+                </div>
+
+                <div class="question-group">
+                    <label for="budget">💰 Orçamento:</label>
+                    <select id="budget" name="budget" required>
+                        <option value="">Selecione...</option>
+                        <option value="low">💵 Baixo</option>
+                        <option value="medium">💴 Médio</option>
+                        <option value="high">💸 Alto</option>
+                    </select>
+                </div>
+
+                <div class="question-group">
+                    <label for="language">🗣️ Prefere lugares com idioma específico?</label>
+                    <input type="text" id="language" name="language" placeholder="Ex: inglês, espanhol, português">
+                </div>
+
+                <div class="question-group">
+                    <label for="interest">🎯 Gosta de praia, montanha ou história?</label>
+                    <select id="interest" name="interest" required>
+                        <option value="">Selecione...</option>
+                        <option value="beach">🏖️ Praia</option>
+                        <option value="mountain">⛰️ Montanha</option>
+                        <option value="history">🏛️ História</option>
+                        <option value="all">🌍 Todos</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">🔍 Buscar Países</button>
+            </form>
+        </section>
+
+        <section id="results-section" style="display:none;">
+            <h2>Países Recomendados:</h2>
+            <div id="country-list">
+                <!-- Resultados da API serão inseridos aqui -->
+            </div>
+        </section>
+
+        <section id="manual-filters-section" style="display:none;">
+            <h2>🔧 Filtros Manuais:</h2>
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="filter-language">🗣️ Idioma:</label>
+                    <input type="text" id="filter-language" placeholder="Ex: inglês, português">
+                </div>
+                <div class="filter-group">
+                    <label for="filter-min-population">👥 População Mínima:</label>
+                    <input type="number" id="filter-min-population" min="0" placeholder="Ex: 1000000">
+                </div>
+                <div class="filter-group">
+                    <label for="filter-max-population">👥 População Máxima:</label>
+                    <input type="number" id="filter-max-population" min="0" placeholder="Ex: 50000000">
+                </div>
+                <div class="filter-group">
+                    <label for="filter-continent">🌍 Continente:</label>
+                    <select id="filter-continent">
+                        <option value="">Todos</option>
+                        <option value="Africa">🌍 África</option>
+                        <option value="Americas">🌎 Américas</option>
+                        <option value="Asia">🌏 Ásia</option>
+                        <option value="Europe">🇪🇺 Europa</option>
+                        <option value="Oceania">🏝️ Oceania</option>
+                    </select>
+                </div>
+                <button id="apply-filters" class="filter-btn">🔍 Aplicar Filtros</button>
+                <button id="clear-filters" class="clear-btn">🗑️ Limpar Filtros</button>
+            </div>
+        </section>
+
+        <section id="favorites-section" style="display:none;">
+            <div class="favorites-header">
+                <h2>🎒 Minha Mochila (Países Salvos):</h2>
+                <div class="favorites-controls">
+                    <span id="favorites-count">0 países salvos</span>
+                    <button id="clear-favorites" class="clear-btn">🗑️ Limpar Mochila</button>
+                </div>
+            </div>
+            <div id="favorite-country-list">
+                <!-- Países favoritos serão inseridos aqui -->
+            </div>
+        </section>
+
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
