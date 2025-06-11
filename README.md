@@ -13,12 +13,6 @@ Este é um sistema web completo que permite aos usuários encontrar países idea
 - **Idioma**: Campo livre para especificar idiomas preferidos
 - **Interesses**: Praia, montanha, história ou todos
 
-### 🤖 Sistema de Recomendação Inteligente
-- Algoritmo de pontuação baseado nas preferências do usuário
-- Considera região geográfica, sub-região, população e idiomas
-- Retorna os 20 países mais compatíveis com o perfil do usuário
-- Filtragem por idioma com busca flexível
-
 ### 📊 Interface de Exibição de Resultados
 - Cards visuais com informações detalhadas de cada país
 - Bandeira, capital, população, idiomas e sub-região
@@ -71,32 +65,12 @@ country_recommender/
 5. **Salve países interessantes** na sua mochila
 6. **Alterne entre modo claro/escuro** conforme preferir
 
-## Características Técnicas
-
-### Sistema de Pontuação
-O algoritmo de recomendação atribui pontos baseado em:
-- **Clima**: Regiões compatíveis com preferência térmica (+2 a +3 pontos)
-- **Ambiente**: População como indicador de urbanização (+2 a +3 pontos)
-- **Orçamento**: Regiões com custo de vida estimado (+2 a +3 pontos)
-- **Interesses**: Regiões adequadas para atividades preferidas (+1 a +3 pontos)
-
-### Responsividade
-- Design adaptável para desktop, tablet e mobile
-- Grid responsivo que se ajusta ao tamanho da tela
-- Formulário otimizado para dispositivos touch
-
-### Performance
-- Carregamento lazy de imagens de bandeiras
-- Cache local dos dados de países
-- Limitação de resultados para melhor performance
 
 ## Funcionalidades Extras Implementadas
 
 ✅ **Modo Dark/Light** com toggle visual e persistência
 ✅ **Filtros manuais** por idioma, população e continente  
 ✅ **Sistema de favoritos** com contador e persistência
-✅ **Design responsivo** para todos os dispositivos
-✅ **Interface moderna** com gradientes e animações
 ✅ **Validação de formulário** com campos obrigatórios
 ✅ **Feedback visual** com alertas e estados hover
 
